@@ -7,14 +7,14 @@ namespace PictureGalleryBlobStorageNetCore.Models
     {
         // Pour la sauvegarde Cosmos DB
         [JsonPropertyName("id")]
-        public String? Id { get; set; }
+        public string? Id { get; set; }
         [Required]
-        public String? Title { get; set; }
+        public string? Title { get; set; }
         [Required]
-        public String? ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:D}")]
         public DateTime Date { get; set; }
-        public String? BrowserFile { get; set; }
+        public string? BrowserFile { get; set; }
     }
 }
