@@ -9,7 +9,7 @@ namespace PictureGalleryBlobStorageNetCore.Controllers
         public async Task<IActionResult> Index()
         {
             // TODO : obtenir la liste des images de BlobStorageManager
-            var pictures = await new BlobStorageManager().GetPicturesAsync();
+            List<PictureController> pictures = new();
             return View(model: pictures);
         }
         // Action pour voir la page du formulaire
@@ -29,7 +29,6 @@ namespace PictureGalleryBlobStorageNetCore.Controllers
             if (!ModelState.IsValid)
                 return View();
             // TODO : utiliser BlobStorageManager pour sauvegarder l'image uploadée
-            await new BlobStorageManager().SavePictureAsync(pictureViewModel);
             return RedirectToAction(nameof(Index));
         }
     }
