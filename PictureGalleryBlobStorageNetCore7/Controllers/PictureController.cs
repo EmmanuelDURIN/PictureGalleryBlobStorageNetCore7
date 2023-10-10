@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PictureGalleryBlobStorageNetCore.BlobStorage;
+using PictureGalleryBlobStorageNetCore.Models;
 using PictureGalleryBlobStorageNetCore.ViewModels;
 
 namespace PictureGalleryBlobStorageNetCore.Controllers
@@ -9,7 +10,7 @@ namespace PictureGalleryBlobStorageNetCore.Controllers
         public async Task<IActionResult> Index()
         {
             // TODO : obtenir la liste des images de BlobStorageManager
-            List<PictureController> pictures = new();
+            List<Picture> pictures = new();
             return View(model: pictures);
         }
         // Action pour voir la page du formulaire
