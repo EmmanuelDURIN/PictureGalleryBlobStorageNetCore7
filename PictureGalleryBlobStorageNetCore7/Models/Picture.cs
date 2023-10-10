@@ -1,12 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
 
 namespace PictureGalleryBlobStorageNetCore.Models
 {
     public class Picture
     {
-        // Pour la sauvegarde Cosmos DB
-        [JsonPropertyName("id")]
         public string? Id { get; set; }
         [Required]
         public string? Title { get; set; }
